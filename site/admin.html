@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Klynx — Review Moderation</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg0: #0a0a0a; --bg1: #111111; --bg2: #161616;
+    --border: rgba(255,255,255,0.08); --border2: rgba(255,255,255,0.14);
+    --text: #f0ede8; --muted: #8a8681;
+    --green: #b8f04e; --green-dim: rgba(184,240,78,0.1); --green-border: rgba(184,240,78,0.25);
+    --pink: #f06a9e; --pink-dim: rgba(240,106,158,0.1); --pink-border: rgba(240,106,158,0.25);
+  }
+  body { background: var(--bg0); color: var(--text); font-family: 'DM Sans', sans-serif; padding: 2rem 1.25rem; }
+  .wrap { max-width: 780px; margin: 0 auto; }
+  h1 { font-family: 'Syne', sans-serif; font-size: 1.4rem; margin-bottom: 0.4rem; }
+  .sub { color: var(--muted); font-size: 0.85rem; margin-bottom: 2rem; }
+
+  #login { max-width: 360px; margin: 4rem auto; text-align: center; }
+  #login input {
+    width: 100%; background: var(--bg2); border: 1px solid var(--border2); color: var(--text);
+    padding: 0.75rem 1rem; border-radius: 10px; font-size: 0.9rem; margin-bottom: 0.75rem; outline: none;
+  }
+  #login input:focus { border-color: var(--green-border); }
+  #login button, .btn {
+    background: var(--green); color: #080808; border: none; font-weight: 500;
+    padding: 0.7rem 1.4rem; border-radius: 100px; cursor: pointer; font-size: 0.85rem;
+  }
+  #login-error { color: var(--pink); font-size: 0.8rem; margin-top: 0.5rem; display: none; }
+
+  #app { display: none; }
+  .api-config { display: flex; gap: 8px; margin-bottom: 1.5rem; }
+  .api-config input { flex: 1; background: var(--bg2); border: 1px solid var(--border); color: var(--muted); font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 8px; }
+
+  .tabs { display: flex; gap: 6px; margin-bottom: 1.5rem; }
+  .tab {
+    background: var(--bg2); border: 1px solid var(--border); color: var(--muted);
+    padding: 0.5rem 1rem; border-radius: 100px; cursor: pointer; font-size: 0.8rem; font-weight: 500;
+  }
+  .tab.active { background: var(--green-dim); border-color: var(--green-border); color: var(--green); }
+
+  .review { background: var(--bg1); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 12px; }
+  .review-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.75rem; }
+  .review-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; }
+  .review-company { color: var(--muted); font-size: 0.78rem; margin-top: 2px; }
+  .review-stars { color: var(--green); font-size: 0.85rem; letter-spacing: 2px; white-space: nowrap; }
+  .review-text { font-size: 0.88rem; color: #ddd8d2; line-height: 1.6; margin-bottom: 1rem; }
+  .review-meta { font-size: 0.72rem; color: var(--muted); margin-bottom: 1rem; }
+  .status-badge {
+    display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 0.2rem 0.6rem; border-radius: 100px;
+  }
+  .status-pending { background: rgba(255,255,255,0.06); color: var(--muted); border: 1px solid var(--border2); }
+  .status-approved { background: var(--green-dim); color: var(--green); border: 1px solid var(--green-border); }
+  .status-rejected { background: var(--pink-dim); color: var(--pink); border: 1px solid var(--pink-border); }
+  .review-actions { display: flex; gap: 8px; }
+  .action-btn { font-size: 0.78rem; font-weight: 500; padding: 0.45rem 0.9rem; border-radius: 100px; border: 1px solid var(--border2); background: transparent; color: var(--text); cursor: pointer; }
+  .action-btn.approve:hover { background: var(--green-dim); border-color: var(--green-border); color: var(--green); }
+  .action-btn.reject:hover { background: var(--pink-dim); border-color: var(--pink-border); color: var(--pink); }
+  .action-btn.delete:hover { background: rgba(255,255,255,0.08); }
+  .empty { color: var(--muted); font-size: 0.85rem; text-align: center; padding: 3rem 0; }
+</style>
+</head>
+<body>
+
+<div id="login">
+  <h1>Klynx Reviews</h1>
+  <p class="sub">Enter your admin key to continue</p>
+  <input type="password" id="admin-key-input" placeholder="Admin key" />
+  <button onclick="doLogin()">Unlock</button>
+  <p id="login-error">Incorrect key or the worker couldn't be reached.</p>
+</div>
+
+<div id="app" class="wrap">
+  <h1>Review moderation</h1>
+  <p class="sub">Approve reviews to publish them on the site, or reject to hide them permanently.</p>
+
+  <div class="api-config">
+    <input id="api-url" placeholder="https://klynx-reviews.YOUR-SUBDOMAIN.workers.dev" />
+    <button class="btn" onclick="saveApiUrl()">Save</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-status="pending" onclick="setTab('pending')">Pending</button>
+    <button class="tab" data-status="approved" onclick="setTab('approved')">Approved</button>
+    <button class="tab" data-status="rejected" onclick="setTab('rejected')">Rejected</button>
+    <button class="tab" data-status="all" onclick="setTab('all')">All</button>
+  </div>
+
+  <div id="list"></div>
+</div>
+
+<script>
+let adminKey = localStorage.getItem('klynx_admin_key') || '';
+let apiUrl = localStorage.getItem('klynx_reviews_api') || '';
+let allReviews = [];
+let currentTab = 'pending';
+
+document.getElementById('api-url').value = apiUrl;
+
+function doLogin() {
+  adminKey = document.getElementById('admin-key-input').value.trim();
+  if (!adminKey) return;
+  localStorage.setItem('klynx_admin_key', adminKey);
+  document.getElementById('login').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  loadReviews();
+}
+
+function saveApiUrl() {
+  apiUrl = document.getElementById('api-url').value.trim().replace(/\/$/, '');
+  localStorage.setItem('klynx_reviews_api', apiUrl);
+  loadReviews();
+}
+
+function setTab(status) {
+  currentTab = status;
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.status === status));
+  render();
+}
+
+async function loadReviews() {
+  if (!apiUrl) return;
+  const list = document.getElementById('list');
+  list.innerHTML = '<p class="empty">Loading…</p>';
+  try {
+    const res = await fetch(`${apiUrl}/admin/list`, { headers: { 'X-Admin-Key': adminKey } });
+    if (res.status === 401) {
+      document.getElementById('login-error').style.display = 'block';
+      document.getElementById('login').style.display = 'block';
+      document.getElementById('app').style.display = 'none';
+      return;
+    }
+    const data = await res.json();
+    allReviews = data.reviews || [];
+    render();
+  } catch (err) {
+    list.innerHTML = `<p class="empty">Could not reach the worker at that URL.</p>`;
+  }
+}
+
+function render() {
+  const list = document.getElementById('list');
+  const filtered = currentTab === 'all' ? allReviews : allReviews.filter(r => r.status === currentTab);
+  if (filtered.length === 0) {
+    list.innerHTML = '<p class="empty">Nothing here yet.</p>';
+    return;
+  }
+  list.innerHTML = filtered.map(r => `
+    <div class="review">
+      <div class="review-top">
+        <div>
+          <div class="review-name">${escapeHtml(r.name)} ${r.company ? `<span class="review-company">— ${escapeHtml(r.company)}</span>` : ''}</div>
+        </div>
+        <div class="review-stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+      </div>
+      <div class="review-text">${escapeHtml(r.text)}</div>
+      <div class="review-meta">
+        <span class="status-badge status-${r.status}">${r.status}</span>
+        &nbsp;·&nbsp; submitted ${new Date(r.submittedAt).toLocaleString()}
+      </div>
+      <div class="review-actions">
+        ${r.status !== 'approved' ? `<button class="action-btn approve" onclick="moderate('${r.id}','approve')">Approve</button>` : ''}
+        ${r.status !== 'rejected' ? `<button class="action-btn reject" onclick="moderate('${r.id}','reject')">Reject</button>` : ''}
+        ${r.status !== 'pending' ? `<button class="action-btn" onclick="moderate('${r.id}','pending')">Move to pending</button>` : ''}
+        <button class="action-btn delete" onclick="removeReview('${r.id}')">Delete</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+async function moderate(id, action) {
+  try {
+    await fetch(`${apiUrl}/admin/${id}/${action}`, { method: 'POST', headers: { 'X-Admin-Key': adminKey } });
+    loadReviews();
+  } catch (err) {
+    alert('Could not update this review. Please try again.');
+  }
+}
+
+async function removeReview(id) {
+  if (!confirm('Delete this review permanently?')) return;
+  try {
+    await fetch(`${apiUrl}/admin/${id}`, { method: 'DELETE', headers: { 'X-Admin-Key': adminKey } });
+    loadReviews();
+  } catch (err) {
+    alert('Could not delete this review. Please try again.');
+  }
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str || '';
+  return div.innerHTML;
+}
+
+// auto-login if we already have a saved key
+if (adminKey) {
+  document.getElementById('login').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  loadReviews();
+}
+</script>
+</body>
+</html>

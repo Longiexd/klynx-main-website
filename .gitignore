@@ -1,0 +1,31 @@
+# --- Personal / not for public repo ---
+personal-links.html
+myphoto.png
+your-photo.jpg
+
+# --- Local dev / scratch files seen in the working folder ---
+# (remove any of these lines if you actually want to keep that file tracked)
+debug-test.html
+test-form.html
+simple-worker.js
+CHANGES.md
+
+# --- Secrets & local config ---
+.env
+.env.*
+*.pem
+*.key
+wrangler.toml.local
+.wrangler/
+.dev.vars
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# --- Node (only relevant if you add tooling later) ---
+node_modules/
+npm-debug.log*

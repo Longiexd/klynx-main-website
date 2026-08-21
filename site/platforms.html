@@ -1,0 +1,2668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="theme-color" content="#080808">
+
+<title>Klynx OS — Coming soon</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="klynx-favicon.svg">
+
+<meta
+  name="description"
+  content="Klynx OS — a fleet-first business operating platform for car rental businesses."
+>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="klynx.css">
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<div class="nav-wrap">
+
+  <div class="nav">
+
+    <a class="logo" href="index.html">
+      Klyn<span>x</span>
+    </a>
+
+
+    <div class="nav-main">
+
+      <!-- SERVICES -->
+
+      <div class="nav-item">
+
+        <button
+          class="nav-link"
+          data-dropdown=""
+          data-en="Services ▾"
+          data-fr="Services ▾"
+        >
+          Services ▾
+        </button>
+
+        <div class="nav-dropdown">
+
+          <div
+            class="dropdown-label"
+            data-en="What we build & manage"
+            data-fr="Ce que nous construisons & gérons"
+          >
+            What we build & manage
+          </div>
+
+
+          <a
+            class="dropdown-link"
+            href="services.html#included"
+          >
+            <strong>Odoo ERP Integration</strong>
+
+            <small
+              data-en="Business systems, workflows & custom configuration"
+              data-fr="Systèmes métier, workflows & configuration sur mesure"
+            >
+              Business systems, workflows & custom configuration
+            </small>
+          </a>
+
+
+          <a
+            class="dropdown-link"
+            href="services.html#website"
+          >
+            <strong>Website Design</strong>
+
+            <small
+              data-en="Websites built to represent and convert"
+              data-fr="Sites conçus pour représenter votre activité et convertir"
+            >
+              Websites built to represent and convert
+            </small>
+          </a>
+
+
+          <a
+            class="dropdown-link"
+            href="services.html#included"
+          >
+            <strong>Automation & Integrations</strong>
+
+            <small
+              data-en="Connect tools and remove repetitive work"
+              data-fr="Connectez vos outils et supprimez le travail répétitif"
+            >
+              Connect tools and remove repetitive work
+            </small>
+          </a>
+
+
+          <a
+            class="dropdown-link"
+            href="infrastructure.html#hosting"
+          >
+            <strong>Server & Infrastructure</strong>
+
+            <small
+              data-en="Hosting, deployment, security & maintenance"
+              data-fr="Hébergement, déploiement, sécurité & maintenance"
+            >
+              Hosting, deployment, security & maintenance
+            </small>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PLATFORMS -->
+
+      <div class="nav-item">
+
+        <button
+          class="nav-link"
+          data-dropdown=""
+          data-en="Platforms ▾"
+          data-fr="Plateformes ▾"
+        >
+          Platforms ▾
+        </button>
+
+        <div class="nav-dropdown">
+
+          <div
+            class="dropdown-label"
+            data-en="Klynx products"
+            data-fr="Produits Klynx"
+          >
+            Klynx products
+          </div>
+
+
+          <a
+            class="dropdown-link"
+            href="platforms.html#klynx-os"
+          >
+
+            <strong>
+              Klynx OS
+              <span class="badge-soon">
+                Coming soon
+              </span>
+            </strong>
+
+            <small
+              data-en="Fleet-first business operating platform for car rental businesses"
+              data-fr="Plateforme métier pensée autour de la flotte pour les agences de location"
+            >
+              Fleet-first business operating platform for car rental businesses
+            </small>
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <a
+        class="nav-link"
+        href="use-cases.html"
+        data-en="Use cases"
+        data-fr="Cas d’usage"
+      >
+        Use cases
+      </a>
+
+
+      <a
+        class="nav-link"
+        href="reviews.html"
+        data-en="Reviews"
+        data-fr="Avis"
+      >
+        Reviews
+      </a>
+
+
+      <a
+        class="nav-link"
+        href="infrastructure.html"
+        data-en="Infrastructure"
+        data-fr="Infrastructure"
+      >
+        Infrastructure
+      </a>
+
+
+      <a
+        class="nav-link"
+        href="pricing.html"
+        data-en="Pricing"
+        data-fr="Tarifs"
+      >
+        Pricing
+      </a>
+
+
+      <a
+        class="nav-link"
+        href="case-study.html#casestudy"
+        data-en="Case study"
+        data-fr="Cas client"
+      >
+        Case study
+      </a>
+
+
+      <a
+        class="nav-link"
+        href="faq.html#faq"
+        data-en="FAQ"
+        data-fr="FAQ"
+      >
+        FAQ
+      </a>
+
+    </div>
+
+
+    <!-- ACTIONS -->
+
+    <div class="nav-actions">
+
+      <div class="lang">
+
+        <button
+          data-lang="en"
+          onclick="setLang('en')"
+        >
+          EN
+        </button>
+
+        <button
+          data-lang="fr"
+          onclick="setLang('fr')"
+        >
+          FR
+        </button>
+
+      </div>
+
+
+      <a
+        class="btn btn-green"
+        href="contact.html"
+        data-en="Contact us"
+        data-fr="Nous contacter"
+      >
+        Contact us
+      </a>
+
+
+      <button
+        class="menu-btn"
+        onclick="toggleMobile()"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- MOBILE -->
+
+  <div
+    class="mobile-menu"
+    id="mobileMenu"
+  >
+
+    <div class="mobile-group">
+
+      <h4
+        data-en="Services"
+        data-fr="Services"
+      >
+        Services
+      </h4>
+
+      <a href="services.html#included">
+        Odoo ERP Integration
+      </a>
+
+      <a href="services.html#website">
+        Website Design
+      </a>
+
+      <a href="services.html#included">
+        Automation & Integrations
+      </a>
+
+      <a href="infrastructure.html#hosting">
+        Server & Infrastructure
+      </a>
+
+    </div>
+
+
+    <div class="mobile-group">
+
+      <h4
+        data-en="Platforms"
+        data-fr="Plateformes"
+      >
+        Platforms
+      </h4>
+
+      <a href="platforms.html#klynx-os">
+        Klynx OS — Coming soon
+      </a>
+
+    </div>
+
+
+    <div class="mobile-group">
+
+      <h4
+        data-en="Explore"
+        data-fr="Explorer"
+      >
+        Explore
+      </h4>
+
+      <a href="use-cases.html">
+        Use cases
+      </a>
+
+      <a href="reviews.html">
+        Reviews
+      </a>
+
+      <a href="infrastructure.html">
+        Infrastructure
+      </a>
+
+      <a href="pricing.html">
+        Pricing
+      </a>
+
+      <a href="case-study.html#casestudy">
+        Case study
+      </a>
+
+      <a href="faq.html#faq">
+        FAQ
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+  class="page-section klynx-os-hero"
+>
+
+  <div
+    aria-hidden="true"
+    class="hero-glow"
+  >
+    <div class="orb g"></div>
+    <div class="orb p"></div>
+  </div>
+
+
+  <div
+    class="inner"
+    style="position:relative;z-index:1;"
+  >
+
+    <div class="hero-inner">
+
+      <div class="badge badge-pink">
+
+        <span class="badge-dot"></span>
+
+        <span
+          data-en="Klynx Platform · Coming soon"
+          data-fr="Plateforme Klynx · Bientôt disponible"
+        >
+          Klynx Platform · Coming soon
+        </span>
+
+      </div>
+
+
+      <h1>
+
+        <span
+          data-en="Klynx OS is currently in development."
+          data-fr="Klynx OS est actuellement en développement."
+        >
+          Klynx OS is currently in development.
+        </span>
+
+      </h1>
+
+
+      <p
+        class="hero-sub"
+        data-en="The first version is being built around real car rental operations — fleet management, availability, reservations, rentals and business visibility."
+        data-fr="La première version est conçue autour d'opérations réelles de location de voitures — gestion de flotte, disponibilité, réservations, locations et visibilité métier."
+      >
+        The first version is being built around real car rental operations —
+        fleet management, availability, reservations, rentals and business
+        visibility.
+      </p>
+
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-green btn-lg"
+          href="#klynx-os"
+          data-en="Explore Klynx OS"
+          data-fr="Découvrir Klynx OS"
+        >
+          Explore Klynx OS
+        </a>
+
+
+        <a
+          class="btn btn-outline btn-lg"
+          href="contact.html"
+          data-en="Talk about your fleet"
+          data-fr="Parler de votre flotte"
+        >
+          Talk about your fleet
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PRODUCT
+========================================================= -->
+
+<section
+  class="page-section alt"
+  id="klynx-os"
+>
+
+  <div class="inner">
+
+    <span class="eyebrow green">
+      Vertical SaaS
+    </span>
+
+
+    <h2>
+      Software built around<br>
+      <span class="g">
+        the fleet.
+      </span>
+    </h2>
+
+
+    <p class="section-desc">
+      Klynx OS starts with the thing the business actually rents:
+      the cars. CRM and administration support the operation instead
+      of becoming the center of it.
+    </p>
+
+
+
+    <!-- =====================================================
+         KLYNX OS PREVIEW
+    ====================================================== -->
+
+    <div class="os-preview">
+
+      <div class="os-window">
+
+
+        <!-- TOP BAR -->
+
+        <div class="os-topbar">
+
+          <div class="os-brand">
+
+            <div class="os-brand-mark">
+              K
+            </div>
+
+            <span>
+              Klynx
+            </span>
+
+          </div>
+
+
+          <div class="os-search">
+
+            <span class="os-search-icon">
+              ⌕
+            </span>
+
+            <span>
+              Search fleet, reservations...
+            </span>
+
+          </div>
+
+
+          <div class="os-top-actions">
+
+            <span class="os-notification"></span>
+
+            <div class="os-avatar">
+              L
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- APP BODY -->
+
+        <div class="os-body">
+
+
+          <!-- SIDEBAR -->
+
+          <aside class="os-sidebar">
+
+            <div class="os-nav-section">
+
+              <div class="os-nav-title">
+                Workspace
+              </div>
+
+
+              <div class="os-nav-item active">
+
+                <span class="os-icon">
+                  ▦
+                </span>
+
+                <span>
+                  Overview
+                </span>
+
+              </div>
+
+
+              <div class="os-nav-item">
+
+                <span class="os-icon">
+                  ▣
+                </span>
+
+                <span>
+                  Fleet
+                </span>
+
+              </div>
+
+
+              <div class="os-nav-item">
+
+                <span class="os-icon">
+                  ◫
+                </span>
+
+                <span>
+                  Reservations
+                </span>
+
+              </div>
+
+
+              <div class="os-nav-item">
+
+                <span class="os-icon">
+                  ↔
+                </span>
+
+                <span>
+                  Rentals
+                </span>
+
+              </div>
+
+
+              <div class="os-nav-item">
+
+                <span class="os-icon">
+                  ◎
+                </span>
+
+                <span>
+                  Customers
+                </span>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="os-nav-section">
+
+              <div class="os-nav-title">
+                Business
+              </div>
+
+
+              <div class="os-nav-item">
+
+                <span class="os-icon">
+                  ◇
+                </span>
+
+                <span>
+                  CRM
+                </span>
+
+              </div>
+
+
+              <div class="os-nav-item">
+
+                <span class="os-icon">
+                  □
+                </span>
+
+                <span>
+                  Invoices
+                </span>
+
+              </div>
+
+
+              <div class="os-nav-item">
+
+                <span class="os-icon">
+                  ⌁
+                </span>
+
+                <span>
+                  Analytics
+                </span>
+
+              </div>
+
+            </div>
+
+          </aside>
+
+
+
+          <!-- DASHBOARD -->
+
+          <div class="os-dashboard">
+
+
+            <!-- HEADER -->
+
+            <div class="os-dashboard-head">
+
+              <div>
+
+                <div class="os-breadcrumb">
+                  Workspace
+                  <span>/</span>
+                  Overview
+                </div>
+
+
+                <h3>
+                  Good afternoon.
+                </h3>
+
+
+                <p>
+                  Here's what's happening with your rental operation.
+                </p>
+
+              </div>
+
+
+              <button class="os-new-rental">
+
+                <span>
+                  +
+                </span>
+
+                New rental
+
+              </button>
+
+            </div>
+
+
+
+            <!-- KPIs -->
+
+            <div class="os-kpis">
+
+
+              <div class="os-kpi">
+
+                <div class="os-kpi-top">
+
+                  <span>
+                    Fleet
+                  </span>
+
+                  <span class="os-kpi-icon green">
+                    ▣
+                  </span>
+
+                </div>
+
+                <strong>
+                  42
+                </strong>
+
+                <small>
+                  vehicles
+                  <b>
+                    Odoo
+                  </b>
+                </small>
+
+              </div>
+
+
+
+              <div class="os-kpi">
+
+                <div class="os-kpi-top">
+
+                  <span>
+                    Customers
+                  </span>
+
+                  <span class="os-kpi-icon green">
+                    ◎
+                  </span>
+
+                </div>
+
+                <strong>
+                  128
+                </strong>
+
+                <small>
+                  in Odoo
+                  <b>
+                    Odoo
+                  </b>
+                </small>
+
+              </div>
+
+
+
+              <div class="os-kpi">
+
+                <div class="os-kpi-top">
+
+                  <span>
+                    Available
+                  </span>
+
+                  <span class="os-kpi-icon pink">
+                    ◉
+                  </span>
+
+                </div>
+
+                <strong>
+                  18
+                </strong>
+
+                <small>
+                  ready to rent
+                  <b class="pink-text">
+                    Live
+                  </b>
+                </small>
+
+              </div>
+
+
+
+              <div class="os-kpi">
+
+                <div class="os-kpi-top">
+
+                  <span>
+                    CRM Leads
+                  </span>
+
+                  <span class="os-kpi-icon green">
+                    ↗
+                  </span>
+
+                </div>
+
+                <strong>
+                  24
+                </strong>
+
+                <small>
+                  active leads
+                  <b>
+                    Odoo
+                  </b>
+                </small>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- MAIN GRID -->
+
+            <div class="os-main-grid">
+
+
+              <!-- FLEET -->
+
+              <div class="os-panel fleet-panel">
+
+                <div class="os-panel-head">
+
+                  <div>
+
+                    <strong>
+                      Fleet overview
+                    </strong>
+
+                    <span>
+                      Live vehicle data from Odoo
+                    </span>
+
+                  </div>
+
+
+                  <button class="os-view-button">
+                    View fleet
+                  </button>
+
+                </div>
+
+
+                <div class="os-fleet-summary">
+
+                  <div>
+
+                    <strong>
+                      42
+                    </strong>
+
+                    <span>
+                      vehicles in Odoo
+                    </span>
+
+                  </div>
+
+
+                  <div class="os-live">
+
+                    <i></i>
+
+                    Live
+
+                  </div>
+
+                </div>
+
+
+                <div class="os-fleet-list">
+
+
+                  <div class="os-car">
+
+                    <div class="os-car-icon">
+                      <span>▱</span>
+                    </div>
+
+
+                    <div class="os-car-info">
+
+                      <strong>
+                        Peugeot 208
+                      </strong>
+
+                      <span>
+                        Economy · TN 2456 123
+                      </span>
+
+                    </div>
+
+
+                    <span class="os-status available">
+                      Available
+                    </span>
+
+                  </div>
+
+
+
+                  <div class="os-car">
+
+                    <div class="os-car-icon">
+                      <span>▱</span>
+                    </div>
+
+
+                    <div class="os-car-info">
+
+                      <strong>
+                        Volkswagen T-Roc
+                      </strong>
+
+                      <span>
+                        SUV · TN 1987 456
+                      </span>
+
+                    </div>
+
+
+                    <span class="os-status rental">
+                      On rental
+                    </span>
+
+                  </div>
+
+
+
+                  <div class="os-car">
+
+                    <div class="os-car-icon">
+                      <span>▱</span>
+                    </div>
+
+
+                    <div class="os-car-info">
+
+                      <strong>
+                        Mercedes C-Class
+                      </strong>
+
+                      <span>
+                        Luxury · TN 3341 890
+                      </span>
+
+                    </div>
+
+
+                    <span class="os-status reserved">
+                      Reserved
+                    </span>
+
+                  </div>
+
+
+
+                  <div class="os-car">
+
+                    <div class="os-car-icon">
+                      <span>▱</span>
+                    </div>
+
+
+                    <div class="os-car-info">
+
+                      <strong>
+                        Renault Clio
+                      </strong>
+
+                      <span>
+                        Economy · TN 7812 332
+                      </span>
+
+                    </div>
+
+
+                    <span class="os-status available">
+                      Available
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+              <!-- CRM -->
+
+              <div class="os-panel crm-panel">
+
+                <div class="os-panel-head">
+
+                  <div>
+
+                    <strong>
+                      CRM leads
+                    </strong>
+
+                    <span>
+                      Live leads from Odoo CRM
+                    </span>
+
+                  </div>
+
+
+                  <button class="os-more">
+                    ···
+                  </button>
+
+                </div>
+
+
+                <div class="os-lead-list">
+
+
+                  <div class="os-lead">
+
+                    <div class="os-lead-avatar pink-bg">
+                      A
+                    </div>
+
+
+                    <div class="os-lead-info">
+
+                      <strong>
+                        Ahmed Ben Ali
+                      </strong>
+
+                      <span>
+                        Peugeot 208
+                      </span>
+
+                    </div>
+
+
+                    <span class="os-stage">
+                      New
+                    </span>
+
+                  </div>
+
+
+
+                  <div class="os-lead">
+
+                    <div class="os-lead-avatar green-bg">
+                      N
+                    </div>
+
+
+                    <div class="os-lead-info">
+
+                      <strong>
+                        Nora Bennett
+                      </strong>
+
+                      <span>
+                        Mercedes C-Class
+                      </span>
+
+                    </div>
+
+
+                    <span class="os-stage">
+                      Qualified
+                    </span>
+
+                  </div>
+
+
+
+                  <div class="os-lead">
+
+                    <div class="os-lead-avatar pink-bg">
+                      Y
+                    </div>
+
+
+                    <div class="os-lead-info">
+
+                      <strong>
+                        Youssef Trabelsi
+                      </strong>
+
+                      <span>
+                        Volkswagen T-Roc
+                      </span>
+
+                    </div>
+
+
+                    <span class="os-stage">
+                      Proposal
+                    </span>
+
+                  </div>
+
+
+
+                  <div class="os-lead">
+
+                    <div class="os-lead-avatar green-bg">
+                      E
+                    </div>
+
+
+                    <div class="os-lead-info">
+
+                      <strong>
+                        Emma Rossi
+                      </strong>
+
+                      <span>
+                        Renault Clio
+                      </span>
+
+                    </div>
+
+
+                    <span class="os-stage">
+                      New
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- RECENT RENTALS -->
+
+            <div class="os-panel os-rentals-panel">
+
+              <div class="os-panel-head">
+
+                <div>
+
+                  <strong>
+                    Recent rentals
+                  </strong>
+
+                  <span>
+                    Rental activity
+                  </span>
+
+                </div>
+
+
+                <button class="os-view-button">
+                  View all →
+                </button>
+
+              </div>
+
+
+              <div class="os-rental-table">
+
+
+                <div class="os-table-head">
+
+                  <span>
+                    Customer
+                  </span>
+
+                  <span>
+                    Vehicle
+                  </span>
+
+                  <span>
+                    Pickup
+                  </span>
+
+                  <span>
+                    Return
+                  </span>
+
+                  <span>
+                    Status
+                  </span>
+
+                </div>
+
+
+
+                <div class="os-table-row">
+
+                  <div>
+                    <strong>
+                      Ahmed Ben Ali
+                    </strong>
+                  </div>
+
+                  <div>
+                    Peugeot 208
+                  </div>
+
+                  <div>
+                    18 Aug · 14:00
+                  </div>
+
+                  <div>
+                    21 Aug
+                  </div>
+
+                  <span class="os-status available">
+                    Active
+                  </span>
+
+                </div>
+
+
+
+                <div class="os-table-row">
+
+                  <div>
+                    <strong>
+                      Nora Bennett
+                    </strong>
+                  </div>
+
+                  <div>
+                    Mercedes C-Class
+                  </div>
+
+                  <div>
+                    19 Aug · 09:30
+                  </div>
+
+                  <div>
+                    24 Aug
+                  </div>
+
+                  <span class="os-status reserved">
+                    Reserved
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FEATURES
+    ====================================================== -->
+
+    <div class="steps">
+
+
+      <div class="step">
+
+        <div class="step-num">
+          01
+        </div>
+
+        <h3>
+          Fleet-first
+        </h3>
+
+        <p>
+          See vehicles, categories, availability and operational
+          status at a glance.
+        </p>
+
+        <span class="step-tag green">
+          Fleet
+        </span>
+
+      </div>
+
+
+
+      <div class="step">
+
+        <div class="step-num">
+          02
+        </div>
+
+        <h3>
+          Reservations
+        </h3>
+
+        <p>
+          Coordinate bookings, pickup and return dates without
+          paper calendars or scattered chats.
+        </p>
+
+        <span class="step-tag pink">
+          Operations
+        </span>
+
+      </div>
+
+
+
+      <div class="step">
+
+        <div class="step-num">
+          03
+        </div>
+
+        <h3>
+          Business visibility
+        </h3>
+
+        <p>
+          Connect rentals to customers, sales and performance
+          without making the workflow complicated.
+        </p>
+
+        <span class="step-tag green">
+          Analytics
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         CALLOUT
+    ====================================================== -->
+
+    <div
+      class="problem-callout"
+      style="margin-top:48px;"
+    >
+
+      <p class="callout-quote">
+
+        <span>
+          Your ERP handles the
+        </span>
+
+        <span class="p">
+          infrastructure.
+        </span>
+
+        <span>
+          Klynx handles the
+        </span>
+
+        <span class="g">
+          experience.
+        </span>
+
+      </p>
+
+
+      <div class="callout-stat">
+
+        <div class="callout-row">
+          Fleet availability at a glance
+        </div>
+
+        <div class="callout-row">
+          Reservations and rentals in one workflow
+        </div>
+
+        <div class="callout-row">
+          Customers, sales and invoicing connected underneath
+        </div>
+
+        <div class="callout-row">
+          Built specifically for car rental businesses
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PHILOSOPHY
+========================================================= -->
+
+<section
+  class="page-section"
+  style="background:var(--bg0);"
+>
+
+  <div class="inner">
+
+    <span class="eyebrow pink">
+      The idea
+    </span>
+
+
+    <h2>
+      Open Klynx. See your business.<br>
+      <span class="g">
+        Know what needs your attention.
+      </span>
+    </h2>
+
+
+    <p class="section-desc">
+      Business software should adapt to the people running the business,
+      not force them to adapt to the software.
+    </p>
+
+
+    <div class="steps">
+
+
+      <div class="step">
+
+        <div class="step-num">
+          01
+        </div>
+
+        <h3>
+          The fleet comes first
+        </h3>
+
+        <p>
+          A rental company isn't primarily a CRM.
+          Its core asset is its fleet. Klynx OS is designed around that reality.
+        </p>
+
+      </div>
+
+
+
+      <div class="step">
+
+        <div class="step-num">
+          02
+        </div>
+
+        <h3>
+          Infrastructure stays underneath
+        </h3>
+
+        <p>
+          Odoo and other systems can handle the complexity underneath
+          without forcing the team to interact with that complexity every day.
+        </p>
+
+      </div>
+
+
+
+      <div class="step">
+
+        <div class="step-num">
+          03
+        </div>
+
+        <h3>
+          The workflow stays simple
+        </h3>
+
+        <p>
+          Complexity should exist in the infrastructure,
+          not in the user's workflow.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     COMING SOON
+========================================================= -->
+
+<section class="page-section alt">
+
+  <div class="inner">
+
+    <div class="hero-inner">
+
+      <div class="badge badge-pink">
+
+        <span class="badge-dot"></span>
+
+        Coming soon
+
+      </div>
+
+
+      <h2>
+
+        Want in early?<br>
+
+        <span class="g">
+          Let's talk fleet.
+        </span>
+
+      </h2>
+
+
+      <p class="hero-sub">
+
+        We're shaping the first release directly with car rental operators —
+        your input now can help decide what ships first.
+
+      </p>
+
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-green btn-lg"
+          href="contact.html"
+        >
+          Talk about your fleet
+        </a>
+
+
+        <a
+          class="btn btn-outline btn-lg"
+          href="index.html"
+        >
+          Back to Klynx
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <a
+    class="logo"
+    href="index.html"
+  >
+    Klyn<span>x</span>
+  </a>
+
+
+  <span>
+    Smart Business Automation
+  </span>
+
+
+  <span>
+    © 2025 Klynx
+  </span>
+
+</footer>
+
+
+
+<!-- BACK TO TOP -->
+
+<button
+  class="backtop"
+  id="backTop"
+  aria-label="Back to top"
+>
+  ↑
+</button>
+
+
+
+<!-- =========================================================
+     KLYNX OS PREVIEW CSS
+     
+     Everything is scoped under .os-* so it cannot
+     interfere with klynx.css or the rest of the page.
+========================================================= -->
+
+<style>
+
+/* =========================================================
+   COMPACT HERO (scoped to this page only)
+========================================================= */
+
+.klynx-os-hero {
+  min-height: auto;
+  padding-top: 4.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .klynx-os-hero {
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+  }
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.os-preview {
+  width: 100%;
+  max-width: 1080px;
+
+  margin: 34px auto 52px;
+
+  position: relative;
+  isolation: isolate;
+}
+
+.os-preview::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 8% 7% -10%;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(200,240,101,.095),
+      transparent 68%
+    );
+
+  filter: blur(55px);
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   WINDOW
+========================================================= */
+
+.os-window {
+  width: 100%;
+
+  background: #111113;
+
+  border: 1px solid rgba(255,255,255,.10);
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 35px 90px rgba(0,0,0,.42),
+    0 0 0 1px rgba(255,255,255,.025),
+    0 0 70px rgba(200,240,101,.035);
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.os-topbar {
+  height: 48px;
+
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  background: #0d0d0f;
+
+  border-bottom: 1px solid #252529;
+}
+
+.os-brand {
+  width: 125px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #f4f4f5;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.os-brand-mark {
+  width: 23px;
+  height: 23px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 6px;
+
+  background: #c8f065;
+
+  color: #09090b;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+.os-search {
+  height: 27px;
+
+  width: 300px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 0 10px;
+
+  border: 1px solid rgba(255,255,255,.055);
+
+  border-radius: 6px;
+
+  background: #151517;
+
+  color: #65656d;
+
+  font-size: 8px;
+}
+
+.os-search-icon {
+  color: #777780;
+
+  font-size: 12px;
+}
+
+.os-top-actions {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.os-notification {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #f06aaa;
+
+  box-shadow:
+    0 0 8px rgba(240,106,170,.4);
+}
+
+.os-avatar {
+  width: 25px;
+  height: 25px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: #242428;
+
+  border: 1px solid #303035;
+
+  color: #d4d4d8;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.os-body {
+  display: flex;
+
+  min-height: 430px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.os-sidebar {
+  width: 145px;
+
+  flex-shrink: 0;
+
+  padding: 19px 9px;
+
+  background: #0e0e10;
+
+  border-right: 1px solid #252529;
+}
+
+.os-nav-section {
+  margin-bottom: 24px;
+}
+
+.os-nav-title {
+  padding: 0 9px 7px;
+
+  color: #55555d;
+
+  font-size: 6px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: .11em;
+}
+
+.os-nav-item {
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 9px;
+
+  margin: 2px 0;
+
+  border-radius: 6px;
+
+  color: #77777f;
+
+  font-size: 8px;
+
+  transition:
+    background .2s ease,
+    color .2s ease;
+}
+
+.os-nav-item.active {
+  background: rgba(200,240,101,.09);
+
+  color: #c8f065;
+}
+
+.os-icon {
+  width: 13px;
+
+  text-align: center;
+
+  color: #686870;
+
+  font-size: 10px;
+}
+
+.os-nav-item.active .os-icon {
+  color: #c8f065;
+}
+
+
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.os-dashboard {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 18px 20px;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(200,240,101,.025),
+      transparent 28%
+    ),
+    #111113;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.os-dashboard-head {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 14px;
+}
+
+.os-breadcrumb {
+  display: flex;
+
+  gap: 6px;
+
+  margin-bottom: 5px;
+
+  color: #696970;
+
+  font-size: 7px;
+}
+
+.os-breadcrumb span {
+  color: #3f3f44;
+}
+
+.os-dashboard-head h3 {
+  margin: 0;
+
+  color: #f4f4f5;
+
+  font-family: inherit;
+
+  font-size: 19px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -.035em;
+}
+
+.os-dashboard-head p {
+  margin: 5px 0 0;
+
+  color: #696970;
+
+  font-size: 8px;
+}
+
+.os-new-rental {
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  padding: 0 11px;
+
+  border: 0;
+
+  border-radius: 6px;
+
+  background: #c8f065;
+
+  color: #09090b;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  cursor: default;
+
+  box-shadow:
+    0 0 22px rgba(200,240,101,.07);
+}
+
+.os-new-rental span {
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   KPI
+========================================================= */
+
+.os-kpis {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 8px;
+
+  margin-bottom: 9px;
+}
+
+.os-kpi {
+  min-width: 0;
+
+  padding: 12px;
+
+  border: 1px solid #28282d;
+
+  border-radius: 8px;
+
+  background: #17171a;
+}
+
+.os-kpi-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+
+  color: #777780;
+
+  font-size: 7px;
+}
+
+.os-kpi-icon {
+  width: 19px;
+  height: 19px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 5px;
+
+  background: rgba(200,240,101,.08);
+
+  color: #c8f065;
+
+  font-size: 9px;
+}
+
+.os-kpi-icon.pink {
+  background: rgba(240,106,170,.08);
+
+  color: #f06aaa;
+}
+
+.os-kpi strong {
+  display: block;
+
+  color: #f4f4f5;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -.035em;
+}
+
+.os-kpi small {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 6px;
+
+  color: #626269;
+
+  font-size: 6.5px;
+}
+
+.os-kpi small b {
+  color: #8d8d95;
+
+  font-weight: 500;
+}
+
+.os-kpi small b.pink-text {
+  color: #f06aaa;
+}
+
+
+/* =========================================================
+   MAIN GRID
+========================================================= */
+
+.os-main-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(0, 1fr);
+
+  gap: 9px;
+
+  margin-bottom: 9px;
+}
+
+
+/* =========================================================
+   PANELS
+========================================================= */
+
+.os-panel {
+  min-width: 0;
+
+  background: #17171a;
+
+  border: 1px solid #28282d;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.os-panel-head {
+  min-height: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 13px;
+
+  border-bottom: 1px solid #28282d;
+}
+
+.os-panel-head strong {
+  display: block;
+
+  color: #e8e8eb;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+.os-panel-head span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #66666e;
+
+  font-size: 6.5px;
+}
+
+.os-view-button {
+  border: 1px solid #303035;
+
+  border-radius: 5px;
+
+  padding: 5px 7px;
+
+  background: #1d1d20;
+
+  color: #9d9da4;
+
+  font-size: 6.5px;
+
+  white-space: nowrap;
+}
+
+.os-more {
+  border: 0;
+
+  background: transparent;
+
+  color: #65656d;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   FLEET
+========================================================= */
+
+.fleet-panel {
+  padding-bottom: 3px;
+}
+
+.os-fleet-summary {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  padding: 12px 13px 9px;
+}
+
+.os-fleet-summary strong {
+  display: block;
+
+  color: #f3f3f5;
+
+  font-size: 23px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -.04em;
+}
+
+.os-fleet-summary span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #66666e;
+
+  font-size: 6.5px;
+}
+
+.os-live {
+  display: flex !important;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: #c8f065 !important;
+
+  font-size: 7px !important;
+}
+
+.os-live i {
+  width: 5px;
+  height: 5px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  background: #c8f065;
+
+  box-shadow:
+    0 0 7px rgba(200,240,101,.5);
+}
+
+.os-fleet-list {
+  padding: 0 13px;
+}
+
+.os-car {
+  min-height: 39px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border-top: 1px solid #28282d;
+}
+
+.os-car-icon {
+  width: 28px;
+  height: 28px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 6px;
+
+  background: rgba(200,240,101,.07);
+
+  color: #c8f065;
+
+  font-size: 15px;
+}
+
+.os-car-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.os-car-info strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #dcdce0;
+
+  font-size: 7.5px;
+
+  font-weight: 500;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.os-car-info span {
+  display: block;
+
+  margin-top: 2px;
+
+  overflow: hidden;
+
+  color: #626269;
+
+  font-size: 6px;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.os-status {
+  flex-shrink: 0;
+
+  padding: 4px 6px;
+
+  border-radius: 10px;
+
+  font-size: 5.5px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.os-status.available {
+  background: rgba(200,240,101,.08);
+
+  color: #c8f065;
+}
+
+.os-status.rental {
+  background: rgba(240,106,170,.08);
+
+  color: #f06aaa;
+}
+
+.os-status.reserved {
+  background: rgba(140,140,255,.08);
+
+  color: #a9a9f5;
+}
+
+
+/* =========================================================
+   CRM
+========================================================= */
+
+.os-lead-list {
+  padding: 0 13px;
+}
+
+.os-lead {
+  min-height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  border-bottom: 1px solid #28282d;
+}
+
+.os-lead:last-child {
+  border-bottom: 0;
+}
+
+.os-lead-avatar {
+  width: 26px;
+  height: 26px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  font-size: 7px;
+
+  font-weight: 500;
+}
+
+.green-bg {
+  background: rgba(200,240,101,.09);
+
+  color: #c8f065;
+}
+
+.pink-bg {
+  background: rgba(240,106,170,.09);
+
+  color: #f06aaa;
+}
+
+.os-lead-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.os-lead-info strong {
+  display: block;
+
+  color: #dcdce0;
+
+  font-size: 7.5px;
+
+  font-weight: 500;
+}
+
+.os-lead-info span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #626269;
+
+  font-size: 6px;
+}
+
+.os-stage {
+  padding: 4px 6px;
+
+  border-radius: 5px;
+
+  background: #1d1d20;
+
+  color: #929299 !important;
+
+  font-size: 5.5px !important;
+}
+
+
+/* =========================================================
+   RENTALS TABLE
+========================================================= */
+
+.os-rentals-panel {
+  padding-bottom: 0;
+}
+
+.os-rental-table {
+  width: 100%;
+}
+
+.os-table-head,
+.os-table-row {
+  display: grid;
+
+  grid-template-columns:
+    1.2fr
+    1.2fr
+    1fr
+    .7fr
+    .6fr;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 13px;
+}
+
+.os-table-head {
+  height: 28px;
+
+  color: #55555d;
+
+  font-size: 5.5px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .08em;
+}
+
+.os-table-row {
+  min-height: 37px;
+
+  border-top: 1px solid #28282d;
+
+  color: #74747c;
+
+  font-size: 6.5px;
+}
+
+.os-table-row strong {
+  color: #dcdce0;
+
+  font-size: 7px;
+
+  font-weight: 500;
+}
+
+.os-table-row .os-status {
+  justify-self: start;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .os-preview {
+    max-width: 1000px;
+  }
+
+  .os-dashboard {
+    padding: 20px;
+  }
+
+  .os-sidebar {
+    width: 135px;
+  }
+
+  .os-search {
+    width: 240px;
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .os-preview {
+    margin-top: 42px;
+
+    overflow-x: auto;
+
+    padding-bottom: 10px;
+  }
+
+  .os-window {
+    min-width: 790px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .os-preview {
+    width: calc(100% + 20px);
+
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .os-window {
+    min-width: 760px;
+
+    border-radius: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCE VISUAL DISTORTION ON SMALL SCREENS
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .os-nav-item {
+    transition: none;
+  }
+
+}
+
+</style>
+
+
+
+<script src="klynx.js"></script>
+
+</body>
+</html>
